@@ -190,6 +190,9 @@ def build_dataloader(
     partner_persona=None, persona_ext=None,
     max_history=4, n_cand=5, use_all=False
     ):
+    partner_persona = None if len(partner_persona) == 0 else partner_persona
+    persona_ext = None if len(persona_ext) == 0 else persona_ext
+
     bos_id, eos_id, pad_id, sep_id, query_id, res_id, latent_id, persona_id, partner_id = \
         get_token_id(tokenizer)
 
