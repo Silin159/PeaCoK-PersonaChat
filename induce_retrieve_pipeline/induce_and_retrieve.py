@@ -129,11 +129,11 @@ def main(mode, with_turns):
         json.dump(as_json, f, indent=2)
 
 if __name__ == '__main__':
-    WITH_TURNS = True
     SAVE_DIR = 'pickled_stuff'
     os.makedirs(SAVE_DIR, exist_ok=True)
 
     for mode in ['valid', 'train']:
-        main(mode, WITH_TURNS)
+        for with_turns in [True, False]:
+            main(mode, with_turns)
 
 
