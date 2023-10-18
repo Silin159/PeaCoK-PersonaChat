@@ -55,4 +55,14 @@ extend_persona_chat_with_induced_and_retrieved.py
 ```
 
 ## Run training or eval
-**TODO**
+
+To run the training and evaluation scripts, please refer to the Makefile. Prior to running it, set the desired arguments in the Makefile. The following options are supported:
+
+```
+make train-pc
+make train-peacok
+
+make eval-ppl
+make eval-f1
+make eval-hits1
+```
