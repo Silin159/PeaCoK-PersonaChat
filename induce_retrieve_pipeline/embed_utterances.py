@@ -18,7 +18,7 @@ def embed_utterances(
     utterances_per_dialogue,
     gpu_id=None,
     embedding_dim=768,
-    model_id='bert-base-uncased'
+    model_id='all-mpnet-base-v2'
     ):
     model = SentenceTransformer(model_id)
     for dialogue_id, utterances_per_persona in tqdm.tqdm(utterances_per_dialogue.items()):
@@ -59,7 +59,6 @@ if __name__ == '__main__':
         '../data/persona_peacok/valid_persona_original_chat_convai2.json',
         'valid'
     )
-
     main(
         '../data/persona_peacok/train_persona_original_chat_convai2.json',
         'train'

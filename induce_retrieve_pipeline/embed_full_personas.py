@@ -28,7 +28,7 @@ def embed_full_personas(
     full_persona_sentences,
     gpu_id=None,
     embedding_dim=768,
-    model_id='bert-base-uncased'
+    model_id='all-mpnet-base-v2'
     ):
     model = SentenceTransformer(model_id)
     for dialogue_id, personas in tqdm.tqdm(full_persona_sentences.items()):
@@ -66,7 +66,6 @@ def main():
         full_persona_sentences,
         open(os.path.join(SAVE_DIR, 'full_persona_sentences.pkl'), 'wb')
     )
-
     print('Computing embeddings...')
     full_persona_embeddings = embed_full_personas(full_persona_sentences, gpu_id=GPU)
     pkl.dump(

@@ -43,7 +43,12 @@ def graph_edges_to_natural_language(g):
 
     return edges_nl
 
-def embed_sentences(sentences, gpu_id=None, embedding_dim=768, model_id='bert-base-uncased'):
+def embed_sentences(
+    sentences,
+    gpu_id=None,
+    embedding_dim=768,
+    model_id='all-mpnet-base-v2'
+    ):
     # Load the SentenceTransformer model
     model = SentenceTransformer(model_id)
     # Embed the sentences
@@ -96,7 +101,7 @@ def main():
     edges_nl = graph_edges_to_natural_language(g)
     pkl.dump(edges_nl, open(os.path.join(SAVE_DIR, 'peacok_edges_nl.pkl'), 'wb'))
 
-    print('Computing sentences...')
+    print(f'Computing sentence embeddings for {len(edges_nl)} sentences...')
     embeddings = embed_sentences(list(edges_nl.values()), gpu_id=GPU)
     edges_embeddings = {}
     for edge_id, embedding in zip(list(edges_nl.keys()), embeddings):

@@ -13,4 +13,6 @@ dependencies:
     - pytorch-ignite==0.4.9
     - tensorboardX
     - accelerate
-
+    - sentence-transformers==2.2.2
+    - faiss-cpu==1.7.4
+    - networkx==3.1
