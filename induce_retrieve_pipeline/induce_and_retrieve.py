@@ -8,17 +8,6 @@ from similarity_searcher import (
     SimilaritySearcher
 )
 
-
-"""
-TODO:
-    !!! Anything related to induced and retrieved persona has to be turn-by-turn 
-    - add a different option that allows to induce_and_retrieve at 
-      EACH turn in the discussion
-    - the json file should then be ~7 times larger
-    - the build_dataloader function should be different, i.e. shouldn't go per-turn
-    - support max_history
-"""
-
 def induce_and_retrieve_single_dialogue(
     partner_persona_data,
     partner_utterance_data,
