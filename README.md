@@ -3,23 +3,22 @@
 ## Gathering the data
 To get started you need the initial data files (reach out to `silin.gao@epfl.ch`)
 
-* Original PersonaChat
+* Original PersonaChat (place under `data/persona_peacok`)
   * `train_persona_original_chat_convai2.json`
   * `valid_persona_original_chat_convai2.json`
-* PersonaChat extended with mapped PeaCoK facts (map and then choose 5 randomly) 
+* PersonaChat extended with mapped PeaCoK facts (map and then choose 5 randomly) (place under `data/persona_peacok`)
   * `valid_persona_original_chat_ext.json`
   * `train_persona_original_chat_ext.json`
-
-These files include the original version of PersonaChat, extended by PeaCoK personas (5 per persona).
+* PeaCoK KG (place under `data/peacok_kg`)
+  * `atomic_simple_head.json`
 
 To be able to run the code as-is, place these files under `data/persona_peacok`.
 
 ## Environment setup
 
 ```
-conda create -n bart-peacok python=3.9
-conda activate bart-peacok
-pip install -r requirements.txt
+conda env create -f workstation_setup/bart_peacok.yml
+conda activate bart_peacok
 ```
 
 ## Preparing datasets for train/eval
@@ -37,7 +36,11 @@ Supported options for the dataset are:
 The first two options can be computed right away (given you obtained the datasets from the first section). For the remaining options you need to run the retrieved-induced components (instruction in the next section).
 
 ## Computing induced and retrieved
-**TODO**
+
+```
+cd induce_retrieve_pipeline
+
+```
 
 ## Run training or eval
 **TODO**
