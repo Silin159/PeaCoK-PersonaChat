@@ -12,7 +12,7 @@ Our data include:
   * Validation set (original profiles): `data/persona_peacok/valid_persona_original_chat_convai2.json`
   * Training set (revised profiles): `data/persona_peacok/train_persona_revised_chat_convai2.json`
   * Validation set (revised profiles): `data/persona_peacok/valid_persona_revised_chat_convai2.json`
-* PersonaChat with profiles augmented with PeaCoK facts (up to 5 randomly chosen for augmenting each profile):
+* PersonaChat with profiles augmented with PeaCoK facts (up to 5 randomly chosen to augment each profile):
   * Training set (augmented original profiles): `data/persona_peacok/train_persona_original_chat_ext.json`
   * Validation set (augmented original profiles): `data/persona_peacok/valid_persona_original_chat_ext.json`
   * Training set (augmented revised profiles): `data/persona_peacok/train_persona_revised_chat_ext.json`
