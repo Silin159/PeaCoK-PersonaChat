@@ -1,20 +1,27 @@
-# BART PeaCoK
+# PeaCoK Augmented PersonaChat based on BART
+
+This is the repository for ConvAI2 PersonaChat dialogue modeling with BART and PeaCoK knowledge graph augmentation.
 
 ## Gathering the data
-To get started you need the initial data files (reach out to `silin.gao@epfl.ch`)
+Our data can be downloaded from [this link](https://drive.google.com/drive/folders/1A51hZvSLvJoPAKDy2XR_eb-ooZqPRgbb?usp=sharing), please unzip the file and place the folder `data` under this root repository.
 
-* Original PersonaChat (place under `data/persona_peacok`)
-  * `train_persona_original_chat_convai2.json`
-  * `valid_persona_original_chat_convai2.json`
-* PeaCoK KG (place under `data/peacok_kg`)
-  * `atomic_simple_head.json`
-* PersonaChat to PeaCoK mapping (place under `data/persona_peacok`)
-  * `persona_extend_full_original.json`
-* PersonaChat extended with mapped PeaCoK nodes (up to 5 randomly chosen) (place under `data/persona_peacok`)
-  * `valid_persona_original_chat_ext.json`
-  * `train_persona_original_chat_ext.json`
+Our data include:
 
-To be able to run the code as-is, place these files under `data/persona_peacok`.
+* Original PersonaChat (with either original or revised PersonaChat profiles):
+  * Training set (original profiles): `data/persona_peacok/train_persona_original_chat_convai2.json`
+  * Validation set (original profiles): `data/persona_peacok/valid_persona_original_chat_convai2.json`
+  * Training set (revised profiles): `data/persona_peacok/train_persona_revised_chat_convai2.json`
+  * Validation set (revised profiles): `data/persona_peacok/valid_persona_revised_chat_convai2.json`
+* PersonaChat with profiles augmented with PeaCoK facts (up to 5 randomly chosen for augmenting each profile):
+  * Training set (augmented original profiles): `data/persona_peacok/train_persona_original_chat_ext.json`
+  * Validation set (augmented original profiles): `data/persona_peacok/valid_persona_original_chat_ext.json`
+  * Training set (augmented revised profiles): `data/persona_peacok/train_persona_revised_chat_ext.json`
+  * Validation set (augmented revised profiles): `data/persona_peacok/valid_persona_revised_chat_ext.json`
+* Full set of PeaCoK facts linked to each PersonaChat profile:
+  * For original profiles: `data/persona_peacok/persona_extend_full_original.json`
+  * For revised profiles: `data/persona_peacok/persona_extend_full_revised.json`
+* Full PeaCoK knowledge graph:
+  * `data/peacok_kg.json`
 
 ## Environment setup
 
